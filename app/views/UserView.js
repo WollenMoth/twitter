@@ -4,8 +4,14 @@ class UserView {
 
     const { id, username, name } = payload;
 
-    if (typeof(id) !== "number" || typeof(username) !== "string" || typeof(name) !== "string")
-      return { error: "Las propiedades del payload necesitan tener un valor válido" };
+    if (
+      typeof id !== "number" ||
+      typeof username !== "string" ||
+      typeof name !== "string"
+    )
+      return {
+        error: "Las propiedades del payload necesitan tener un valor válido",
+      };
   }
 }
 
