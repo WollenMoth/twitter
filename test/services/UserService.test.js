@@ -18,4 +18,10 @@ describe("Unit Tests for UserService class", () => {
     expect(userInfoList[2]).toBe("André");
     expect(userInfoList[3]).not.toBeUndefined();
   });
+  test("Update username", () => {
+    const user = UserService.create(1, "wollenmoth", "André");
+
+    UserService.updateUserUsername(user, "andre2908");
+    expect(user.username).toBe("andre2908");
+  });
 });
